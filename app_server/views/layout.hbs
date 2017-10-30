@@ -5,10 +5,39 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel='stylesheet' href='/stylesheets/style.css' />
       <link rel='stylesheet' href='/bootstrap-4/css/amelia.bootstrap.css' />
-      <link rel='javascript' href='/bootstrap-4/js/bootstrap.min.js' />
-      <link rel='javascript' href='/javascripts/jquery-3.2.1.min.js' />
+
   </head>
   <body>
-    {{{body}}}
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Loc8r</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main" >
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {{{body}}}
+
+        <footer>
+            <div class="row">
+                <div class="col-xs-12"><small>&copy; Simon Holmes 2014</small></div>
+            </div>
+        </footer>
+    </div>
+    <link rel='javascript' href='/bootstrap-4/js/bootstrap.min.js' />
+    <link rel='javascript' href='/javascripts/jquery-3.2.1.min.js' />
   </body>
 </html>
