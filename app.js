@@ -5,6 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
+var hbs = require( 'express-handlebars' );
+require('./app_server/models/db');
+
 
 var index = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
@@ -12,6 +15,12 @@ var users = require('./app_server/routes/users');
 var app = express();
 
 // view engine setup
+app.engine('hbs', hbs({
+    extname: 'hbs',
+    defaultLayout: 'layout',
+    layoutsDir: __dirname + '/app_server/views/',
+    helpers: require("./app_server/controllers/_includes/sharedHTMLfunctions.js").helpers
+}));
 app.set('views', path.join(__dirname, 'app_server', 'views'));
 app.set('view engine', 'hbs');
 
